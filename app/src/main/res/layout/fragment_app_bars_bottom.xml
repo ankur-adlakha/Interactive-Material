@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            style="@style/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="@dimen/medium_16"
+            app:title="Bottom App Bar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/custom_128"
+            android:fillViewport="true"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/start_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/large_24"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fab_visibility_title"
+                    style="@style/Headling6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_hide_fab"
+                    app:layout_constraintBottom_toTopOf="@id/fab_visibility_switch"
+                    app:layout_constraintStart_toEndOf="@id/start_guideline"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/fab_visibility_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:layout_constraintStart_toEndOf="@id/start_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/fab_visibility_title" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fab_alignement_mode_title"
+                    style="@style/Headling6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/large_24"
+                    android:text="@string/alignment_mode"
+                    app:layout_constraintBottom_toTopOf="@id/fab_alignement_mode_radio_group"
+                    app:layout_constraintStart_toEndOf="@id/start_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/fab_visibility_switch" />
+
+                <RadioGroup
+                    android:id="@+id/fab_alignement_mode_radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toEndOf="@id/start_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/fab_alignement_mode_title">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/fab_alignement_center"
+                        style="@style/Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/center" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/fab_alignement_end"
+                        style="@style/Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/medium_16"
+                        android:text="@string/end" />
+                </RadioGroup>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fab_cradle_margin_title"
+                    style="@style/Headling6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/large_24"
+                    android:text="@string/cradle_margin"
+                    app:layout_constraintBottom_toTopOf="@id/fab_cradle_margin_seekbar"
+                    app:layout_constraintStart_toEndOf="@id/start_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/fab_alignement_mode_radio_group" />
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/fab_cradle_margin_seekbar"
+                    style="@style/Widget.AppCompat.SeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/secondaryDark"
+                    app:layout_constraintEnd_toStartOf="@id/center_guideline"
+                    app:layout_constraintStart_toEndOf="@id/start_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/fab_cradle_margin_title" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fab_cradle_corner_radius_title"
+                    style="@style/Headling6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/large_24"
+                    android:text="@string/cradle_rounded_corner_radius"
+                    app:layout_constraintBottom_toTopOf="@id/fab_cradle_corner_radius_seekbar"
+                    app:layout_constraintStart_toEndOf="@id/start_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/fab_cradle_margin_seekbar" />
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/fab_cradle_corner_radius_seekbar"
+                    style="@style/Widget.AppCompat.SeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/secondaryDark"
+                    app:layout_constraintEnd_toStartOf="@id/center_guideline"
+                    app:layout_constraintStart_toEndOf="@id/start_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/fab_cradle_corner_radius_title" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fab_cradle_vertical_offset_title"
+                    style="@style/Headling6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/large_24"
+                    android:text="@string/cradle_vertical_offset"
+                    app:layout_constraintBottom_toTopOf="@id/fab_cradle_vertical_offset_seekbar"
+                    app:layout_constraintStart_toEndOf="@id/start_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/fab_cradle_corner_radius_seekbar" />
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/fab_cradle_vertical_offset_seekbar"
+                    style="@style/Widget.AppCompat.SeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/secondaryDark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/center_guideline"
+                    app:layout_constraintStart_toEndOf="@id/start_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/fab_cradle_vertical_offset_title" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/center_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintGuide_percent="0.5"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_android_white_24dp"
+            app:backgroundTint="@color/secondaryDark"
+            app:layout_anchor="@id/bottom_app_bar" />
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/secondaryDark"
+            app:fabAlignmentMode="center"
+            app:fabCradleMargin="@dimen/medium_16"
+            app:fabCradleRoundedCornerRadius="40dp"
+            app:fabCradleVerticalOffset="8dp"
+            app:menu="@menu/fab_bottombar_menu"
+            app:navigationIcon="@drawable/ic_chevron_left_black_24dp" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Interactive Material</string>
+    <string name="show_hide_fab">Show/Hide Fab</string>
+    <string name="alignment_mode">Alignment Mode</string>
+    <string name="center">Center</string>
+    <string name="end">End</string>
+    <string name="cradle_margin">Cradle Margin</string>
+    <string name="cradle_rounded_corner_radius">Cradle Rounded Corner Radius</string>
+    <string name="cradle_vertical_offset">Cradle Vertical Offset</string>
+</resources>

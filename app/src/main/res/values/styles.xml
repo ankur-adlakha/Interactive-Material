@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/secondaryPrimary</item>
+        <item name="colorPrimaryDark">@color/secondaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Headling6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/worksans_bold</item>
+        <item name="android:fontFamily">@font/worksans_bold</item>
+    </style>
+
+    <style name="Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/worksans_semibold</item>
+        <item name="android:fontFamily">@font/worksans_semibold</item>
+    </style>
+
+    <style name="heading5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/worksans_black</item>
+        <item name="android:fontFamily">@font/worksans_black</item>
+    </style>
+
+    <style name="toolbar" parent="Widget.MaterialComponents.Toolbar.Surface">
+        <item name="titleTextAppearance">@style/ToolbarText</item>
+        <item name="android:background">@color/secondaryDark</item>
+    </style>
+
+    <style name="ToolbarText" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:fontFamily">@font/worksans_black</item>
+        <item name="fontFamily">@font/worksans_bold</item>
+    </style>
+</resources>
