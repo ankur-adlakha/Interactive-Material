@@ -26,6 +26,7 @@ class BottomAppBarsFragment : Fragment() {
             inflater, R.layout.fragment_app_bars_bottom,
             container, false
         ) as FragmentAppBarsBottomBinding
+        initToolbar(binding)
         initBottomAppBar(binding)
         initShowHideFab(binding)
         initAlignmentMode(binding)
@@ -35,10 +36,31 @@ class BottomAppBarsFragment : Fragment() {
         return binding.root
     }
 
-    private fun initBottomAppBar(binding: FragmentAppBarsBottomBinding) {
-        binding.bottomAppBar.setNavigationOnClickListener {
+    private fun initToolbar(binding: FragmentAppBarsBottomBinding) {
+        binding.toolbar.setNavigationOnClickListener {
             activity?.finish()
         }
+    }
+
+    private fun initBottomAppBar(binding: FragmentAppBarsBottomBinding) {
+        binding.bottomAppBar.setOnMenuItemClickListener {
+            if (it.itemId == R.id.bottom_app_bar_menu_item_fab_properties) {
+                binding.dummyScrollingContent.visibility = View.GONE
+                binding.fabPropertiesContent.visibility = View.VISIBLE
+                return@setOnMenuItemClickListener true
+            } else {
+                if (binding.dummyScrollingContent.adapter == null) {
+                    initDummyScrollingContent(binding)
+                }
+                binding.dummyScrollingContent.visibility = View.VISIBLE
+                binding.fabPropertiesContent.visibility = View.GONE
+                return@setOnMenuItemClickListener true
+            }
+        }
+    }
+
+    private fun initDummyScrollingContent(binding: FragmentAppBarsBottomBinding) {
+        binding.dummyScrollingContent.adapter = DummyScrollingListAdapter()
     }
 
     private fun initCradleVerticalOffset(binding: FragmentAppBarsBottomBinding) {

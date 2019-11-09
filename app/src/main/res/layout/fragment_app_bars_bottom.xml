@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -8,13 +9,26 @@
         android:background="@color/colorPrimaryDark">
 
         <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             style="@style/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_chevron_left_black_24dp"
             android:elevation="@dimen/medium_16"
             app:title="Bottom App Bar" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dummy_scrolling_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="100"
+            tools:listitem="@layout/item_dummy_list" />
+
         <ScrollView
+            android:id="@+id/fab_properties_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/custom_128"
@@ -182,7 +196,7 @@
             app:fabCradleMargin="@dimen/medium_16"
             app:fabCradleRoundedCornerRadius="40dp"
             app:fabCradleVerticalOffset="8dp"
-            app:menu="@menu/fab_bottombar_menu"
-            app:navigationIcon="@drawable/ic_chevron_left_black_24dp" />
+            app:hideOnScroll="true"
+            app:menu="@menu/fab_bottombar_menu" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

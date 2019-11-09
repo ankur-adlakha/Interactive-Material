@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_16"
+        android:layout_marginTop="@dimen/small_8"
+        android:layout_marginEnd="@dimen/medium_16"
+        app:cardCornerRadius="@dimen/small_2"
+        app:cardElevation="4dp"
+        app:contentPaddingBottom="@dimen/custom_20"
+        app:contentPaddingLeft="@dimen/large_24"
+        app:contentPaddingRight="@dimen/medium_16"
+        app:contentPaddingTop="@dimen/custom_20">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_tag_faces_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/secondaryLight" />
+
+            <View
+                android:id="@+id/rectangle_big"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/small_8"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginEnd="@dimen/large_32"
+                android:background="#939393"
+                app:layout_constraintBottom_toTopOf="@id/rectangle_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/circle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <View
+                android:id="@+id/rectangle_small"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/small_6"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/small_4"
+                android:layout_marginEnd="@dimen/xxlarge_48"
+                android:background="#D8D8D8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/circle"
+                app:layout_constraintTop_toBottomOf="@id/rectangle_big"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
