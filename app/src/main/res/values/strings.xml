@@ -7,4 +7,10 @@
     <string name="cradle_margin">Cradle Margin</string>
     <string name="cradle_rounded_corner_radius">Cradle Rounded Corner Radius</string>
     <string name="cradle_vertical_offset">Cradle Vertical Offset</string>
+    <string name="hide_bottom_nav_question">Hide Bottom Navigation On Scroll?</string>
+    <string name="home">Home</string>
+    <string name="notifications">Notifications</string>
+    <string name="search">Search</string>
+    <string name="more">More</string>
+    <string name="settings">Settings</string>
 </resources>

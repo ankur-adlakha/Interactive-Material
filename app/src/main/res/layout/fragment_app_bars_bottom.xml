@@ -50,7 +50,7 @@
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/fab_visibility_title"
-                    style="@style/Headling6"
+                    style="@style/Heading6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/show_hide_fab"
@@ -69,7 +69,7 @@
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/fab_alignement_mode_title"
-                    style="@style/Headling6"
+                    style="@style/Heading6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/large_24"
@@ -105,7 +105,7 @@
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/fab_cradle_margin_title"
-                    style="@style/Headling6"
+                    style="@style/Heading6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/large_24"
@@ -126,7 +126,7 @@
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/fab_cradle_corner_radius_title"
-                    style="@style/Headling6"
+                    style="@style/Heading6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/large_24"
@@ -147,7 +147,7 @@
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/fab_cradle_vertical_offset_title"
-                    style="@style/Headling6"
+                    style="@style/Heading6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/large_24"

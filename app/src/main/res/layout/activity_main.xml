@@ -10,29 +10,35 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/secondaryDark"
         tools:context=".MainActivity">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_text"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
             android:layout_width="0dp"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/large_24"
+            android:paddingTop="@dimen/large_24"
+            android:paddingBottom="@dimen/large_24"
+            android:text="Material Components"
+            app:fontFamily="@font/worksans_bold"
+            app:layout_constraintBottom_toTopOf="@id/view_material_components"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            style="@style/toolbar"
-            app:layout_constraintTop_toTopOf="parent"
-            app:title="Material Components" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/view_material_components"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:background="@drawable/backdrop_main"
             android:orientation="vertical"
-            android:layout_marginTop="24dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+            app:layout_constraintTop_toBottomOf="@id/title_text" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

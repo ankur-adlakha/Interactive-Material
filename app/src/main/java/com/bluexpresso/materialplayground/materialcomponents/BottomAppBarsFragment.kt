@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.bluexpresso.materialplayground.R
 import com.bluexpresso.materialplayground.databinding.FragmentAppBarsBottomBinding
+import com.bluexpresso.materialplayground.materialcomponents.DummyScrollingListAdapter.Companion.ITEM_TYPE_LIST
 import com.google.android.material.bottomappbar.BottomAppBar
 
 class BottomAppBarsFragment : Fragment() {
@@ -60,7 +61,7 @@ class BottomAppBarsFragment : Fragment() {
     }
 
     private fun initDummyScrollingContent(binding: FragmentAppBarsBottomBinding) {
-        binding.dummyScrollingContent.adapter = DummyScrollingListAdapter()
+        binding.dummyScrollingContent.adapter = DummyScrollingListAdapter(ITEM_TYPE_LIST)
     }
 
     private fun initCradleVerticalOffset(binding: FragmentAppBarsBottomBinding) {
