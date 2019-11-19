@@ -13,4 +13,9 @@
     <string name="search">Search</string>
     <string name="more">More</string>
     <string name="settings">Settings</string>
+    <string name="outlined_button">Outlined Button</string>
+    <string name="unelevated_button">Unelevated Button</string>
+    <string name="text_button">Text Button</string>
+    <string name="buttons">Buttons</string>
+    <string name="bottom_navigation">Bottom navigation</string>
 </resources>

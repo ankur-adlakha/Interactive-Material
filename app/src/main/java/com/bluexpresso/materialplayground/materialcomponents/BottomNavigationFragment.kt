@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bluexpresso.materialplayground.R
 import com.bluexpresso.materialplayground.databinding.FragmentBottomNavigationBinding
 import com.bluexpresso.materialplayground.materialcomponents.DummyScrollingListAdapter.Companion.ITEM_TYPE_CARD
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.behavior.HideBottomViewOnScrollBehavior
 
 class BottomNavigationFragment : Fragment() {
@@ -29,10 +30,17 @@ class BottomNavigationFragment : Fragment() {
                 inflater, R.layout.fragment_bottom_navigation,
                 container, false
             ) as FragmentBottomNavigationBinding
+        initToolbar(binding.toolbar)
         initDummyGridScrollingContent(binding)
         initBottomNavMenuItems(binding)
         initHideBottomNavOnScroll(binding)
         return binding.root
+    }
+
+    private fun initToolbar(toolbar: MaterialToolbar) {
+        toolbar.setNavigationOnClickListener {
+            activity?.finish()
+        }
     }
 
     private fun initHideBottomNavOnScroll(binding: FragmentBottomNavigationBinding) {
