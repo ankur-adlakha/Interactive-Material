@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/custom_96" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/outlined_button"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxlarge_48"
+                android:text="@string/outlined_button"
+                app:iconTint="@color/secondaryLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/textOnPrimary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/unelevated_button"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxlarge_48"
+                android:text="@string/unelevated_button"
+                android:visibility="gone"
+                app:iconTint="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/textOnPrimary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/text_button"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxlarge_48"
+                android:text="@string/text_button"
+                android:visibility="gone"
+                app:iconTint="@color/secondaryLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/textOnPrimary" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/show_hide_button_icon"
+                style="@style/Heading6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/large_32"
+                android:text="@string/show_hide_button_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/guide_line" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/small_8"
+                android:checked="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/show_hide_button_icon"
+                app:thumbTint="@color/switch_thumb" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/button_gravity_title"
+                style="@style/Heading6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/large_32"
+                android:text="@string/icon_gravity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/switch_icon" />
+
+            <RadioGroup
+                android:id="@+id/rg_icon_gravity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/medium_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_gravity_title">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rb_icon_start"
+                    style="@style/Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rb_icon_end"
+                    style="@style/Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/end" />
+            </RadioGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/stroke_width_title"
+                style="@style/Heading6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/large_32"
+                android:text="@string/stroke_width"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rg_icon_gravity" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/stroke_width_seek_bar"
+                style="@style/Widget.AppCompat.SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/medium_16"
+                android:layout_marginEnd="@dimen/custom_56"
+                android:max="30"
+                android:progressTint="@color/secondaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/stroke_width_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/corner_radius_title"
+                style="@style/Heading6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/large_32"
+                android:text="@string/corner_radius"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/stroke_width_seek_bar" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/corner_radius_seek_bar"
+                style="@style/Widget.AppCompat.SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/medium_16"
+                android:layout_marginEnd="@dimen/custom_56"
+                android:max="48"
+                android:progressTint="@color/secondaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/corner_radius_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/corner_radius_seek_bar_value"
+                style="@style/Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/corner_radius_seek_bar"
+                app:layout_constraintEnd_toEndOf="@id/corner_radius_seek_bar"
+                tools:text="12" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/stroke_width_seek_bar_value"
+                style="@style/Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/stroke_width_seek_bar"
+                app:layout_constraintEnd_toEndOf="@id/stroke_width_seek_bar"
+                tools:text="12" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

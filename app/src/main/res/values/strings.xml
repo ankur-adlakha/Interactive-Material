@@ -18,4 +18,9 @@
     <string name="text_button">Text Button</string>
     <string name="buttons">Buttons</string>
     <string name="bottom_navigation">Bottom navigation</string>
+    <string name="show_hide_button_icon">Show/Hide Button Icon</string>
+    <string name="icon_gravity">Icon Gravity</string>
+    <string name="start">Start</string>
+    <string name="stroke_width">Stroke Width</string>
+    <string name="corner_radius">Corner Radius</string>
 </resources>

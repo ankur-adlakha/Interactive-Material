@@ -13,9 +13,9 @@
             android:layout_height="?attr/actionBarSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:title="@string/buttons"
             app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@drawable/ic_chevron_left_black_24dp" />
+            app:navigationIcon="@drawable/ic_chevron_left_black_24dp"
+            app:title="@string/buttons" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/buttons_tab"
@@ -52,6 +52,7 @@
             android:id="@+id/buttons_view_pager"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

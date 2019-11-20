@@ -3,7 +3,7 @@ package com.bluexpresso.materialplayground
 import androidx.fragment.app.Fragment
 import com.bluexpresso.materialplayground.materialcomponents.BottomAppBarsFragment
 import com.bluexpresso.materialplayground.materialcomponents.BottomNavigationFragment
-import com.bluexpresso.materialplayground.materialcomponents.ButtonsFragment
+import com.bluexpresso.materialplayground.materialcomponents.buttons.ButtonsFragment
 
 enum class MaterialComponents(val title: String) {
     APP_BARS_BOTTOM("App bars: bottom"),
