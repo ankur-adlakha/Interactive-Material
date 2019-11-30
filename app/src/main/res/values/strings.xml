@@ -26,4 +26,15 @@
     <string name="cards">Cards</string>
     <string name="card_elevation">Card elevation</string>
     <string name="card_corner_radius">Card corner radius</string>
+    <string name="Chips">Chips</string>
+    <string name="entry_chip">Entry Chip</string>
+    <string name="filter_chip">Filter Chip</string>
+    <string name="choice_chip">Choice Chip</string>
+    <string name="action_chip">Action Chip</string>
+    <string name="show_hide_chip_icon">Show/Hide Chip icon</string>
+    <string name="show_hide_chip_close_icon">Show/Hide Chip close icon</string>
+    <string name="entry_chip_description">Use entry chips to represent a complex piece of information in a compact form. This style usually contains an optional chip icon, optional close icon, and is optionally checkable.</string>
+    <string name="chip_one">Chip one</string>
+    <string name="chip_two">Chip Two</string>
+    <string name="chip_filter_description">Use filter chips containing tags or descriptive words to filter a collection. This style usually contains an optional chip icon, an optional close icon, and is always checkable.</string>
 </resources>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/custom_96" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/entry_chip"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxlarge_48"
+                android:text="@string/entry_chip"
+                android:textAppearance="@style/Body2"
+                app:chipIcon="@drawable/ic_person_black_24dp"
+                app:chipIconTint="@color/white"
+                app:chipStrokeColor="@color/white"
+                app:chipSurfaceColor="#003c8f"
+                app:closeIconTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_filter_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxlarge_48"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:singleSelection="true"
+                tools:visibility="visible">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_filter_one"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chip_one"
+                    android:textAppearance="@style/Body2"
+                    app:checkedIcon="@drawable/ic_check_white_24dp"
+                    app:chipIconVisible="false"
+                    app:chipSurfaceColor="#003c8f"
+                    app:closeIconTint="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_filter_two"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chip_two"
+                    android:textAppearance="@style/Body2"
+                    app:checkedIcon="@drawable/ic_check_white_24dp"
+                    app:chipIconVisible="false"
+                    app:chipSurfaceColor="#003c8f"
+                    app:closeIconTint="@color/white" />
+            </com.google.android.material.chip.ChipGroup>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/show_hide_chip_icon"
+                style="@style/Heading6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/large_32"
+                android:text="@string/show_hide_chip_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/guide_line" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_chip_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/small_8"
+                android:checked="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/show_hide_chip_icon"
+                app:thumbTint="@color/switch_thumb" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/show_hide_chip_close_icon"
+                style="@style/Heading6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/large_32"
+                android:text="@string/show_hide_chip_close_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/switch_chip_icon" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_chip_close_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/small_8"
+                android:checked="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/show_hide_chip_close_icon"
+                app:thumbTint="@color/switch_thumb" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/stroke_width_title"
+                style="@style/Heading6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/large_32"
+                android:text="@string/stroke_width"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/switch_chip_close_icon" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/stroke_width_seek_bar"
+                style="@style/Widget.AppCompat.SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/medium_16"
+                android:layout_marginEnd="@dimen/custom_56"
+                android:max="8"
+                android:progressTint="@color/secondaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/stroke_width_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/corner_radius_title"
+                style="@style/Heading6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/large_32"
+                android:text="@string/corner_radius"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/stroke_width_seek_bar" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/corner_radius_seek_bar"
+                style="@style/Widget.AppCompat.SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/medium_16"
+                android:layout_marginEnd="@dimen/custom_56"
+                android:max="32"
+                android:progressTint="@color/secondaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/corner_radius_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/corner_radius_seek_bar_value"
+                style="@style/Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/corner_radius_seek_bar"
+                app:layout_constraintEnd_toEndOf="@id/corner_radius_seek_bar"
+                tools:text="12" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/stroke_width_seek_bar_value"
+                style="@style/Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/stroke_width_seek_bar"
+                app:layout_constraintEnd_toEndOf="@id/stroke_width_seek_bar"
+                tools:text="12" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/chip_description"
+                style="@style/Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_16"
+                android:layout_marginTop="@dimen/xxlarge_48"
+                android:paddingBottom="@dimen/large_32"
+                android:text="@string/chip_filter_description"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/corner_radius_seek_bar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
