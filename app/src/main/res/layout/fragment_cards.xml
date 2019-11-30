@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryLight"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="@dimen/medium_16"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    style="@style/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:navigationIcon="@drawable/ic_chevron_left_black_24dp"
+                    app:title="@string/cards" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/xxlarge_48"
+                android:outlineSpotShadowColor="@color/secondaryLight"
+                app:cardBackgroundColor="#65499c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+                app:strokeColor="@color/white">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_256"
+                    android:padding="@dimen/custom_96"
+                    app:srcCompat="@drawable/ic_android" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/card_view_elevation"
+                style="@style/Heading6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_32"
+                android:layout_marginTop="@dimen/xxlarge_48"
+                android:text="@string/card_elevation"
+                app:layout_constraintBottom_toTopOf="@id/card_view_elevation_seekbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_view" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/card_view_elevation_value"
+                style="@style/Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxlarge_48"
+                android:layout_marginEnd="@dimen/large_32"
+                app:layout_constraintBottom_toTopOf="@id/card_view_elevation_seekbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_view"
+                tools:text="1" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/card_view_elevation_seekbar"
+                style="@style/Widget.AppCompat.SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_32"
+                android:layout_marginTop="@dimen/medium_16"
+                android:layout_marginEnd="@dimen/large_32"
+                android:max="40"
+                android:progressTint="@color/secondaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_view_elevation" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/card_view_corner_radius"
+                style="@style/Heading6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_32"
+                android:layout_marginTop="@dimen/xxlarge_48"
+                android:text="@string/card_corner_radius"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_view_elevation_seekbar" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/card_view_corner_radius_value"
+                style="@style/Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_32"
+                android:layout_marginTop="@dimen/xxlarge_48"
+                android:layout_marginEnd="@dimen/large_32"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_view_elevation_seekbar"
+                tools:text="1" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/card_view_corner_radius_seekbar"
+                style="@style/Widget.AppCompat.SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_32"
+                android:layout_marginTop="@dimen/medium_16"
+                android:layout_marginEnd="@dimen/large_32"
+                android:max="40"
+                android:progressTint="@color/secondaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_view_corner_radius" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/card_view_stroke_width"
+                style="@style/Heading6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_32"
+                android:layout_marginTop="@dimen/xxlarge_48"
+                android:text="@string/stroke_width"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_view_corner_radius_seekbar" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/card_view_stroke_width_value"
+                style="@style/Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_32"
+                android:layout_marginTop="@dimen/xxlarge_48"
+                android:layout_marginEnd="@dimen/large_32"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_view_corner_radius_seekbar"
+                tools:text="1" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/card_view_stroke_width_seekbar"
+                style="@style/Widget.AppCompat.SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/large_32"
+                android:layout_marginTop="@dimen/medium_16"
+                android:layout_marginEnd="@dimen/large_32"
+                android:max="40"
+                android:progressTint="@color/secondaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_view_stroke_width" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

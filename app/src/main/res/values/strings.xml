@@ -23,4 +23,7 @@
     <string name="start">Start</string>
     <string name="stroke_width">Stroke Width</string>
     <string name="corner_radius">Corner Radius</string>
+    <string name="cards">Cards</string>
+    <string name="card_elevation">Card elevation</string>
+    <string name="card_corner_radius">Card corner radius</string>
 </resources>
