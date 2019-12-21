@@ -6,13 +6,15 @@ import com.bluexpresso.materialplayground.materialcomponents.BottomNavigationFra
 import com.bluexpresso.materialplayground.materialcomponents.buttons.ButtonsFragment
 import com.bluexpresso.materialplayground.materialcomponents.cards.CardsFragment
 import com.bluexpresso.materialplayground.materialcomponents.chips.ChipsFragment
+import com.bluexpresso.materialplayground.materialcomponents.textfields.TextFieldsFragment
 
 enum class MaterialComponents(val title: String) {
     APP_BARS_BOTTOM("App bars: bottom"),
-    BOTTOM_NAVIGATION("Bottom Navigation"),
+    BOTTOM_NAVIGATION("Bottom navigation"),
     BUTTONS("Buttons"),
     CARDS("Cards"),
-    CHIPS("Chips");
+    CHIPS("Chips"),
+    TEXT_FIELDS("Text fields");
 
     companion object {
         fun getNavigationForItem(componentTitle: String): Fragment {
@@ -22,6 +24,7 @@ enum class MaterialComponents(val title: String) {
                 BUTTONS.title -> return ButtonsFragment.newInstance()
                 CARDS.title -> return CardsFragment.newInstance()
                 CHIPS.title -> return ChipsFragment.newInstance()
+                TEXT_FIELDS.title -> return TextFieldsFragment.newInstance()
             }
             return BottomAppBarsFragment.newInstance()
         }

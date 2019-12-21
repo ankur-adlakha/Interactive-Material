@@ -37,4 +37,13 @@
     <string name="chip_one">Chip one</string>
     <string name="chip_two">Chip Two</string>
     <string name="chip_filter_description">Use filter chips containing tags or descriptive words to filter a collection. This style usually contains an optional chip icon, an optional close icon, and is always checkable.</string>
+    <string name="text_fields">Text Fields</string>
+    <string name="filled">Filled</string>
+    <string name="outlined">Outlined</string>
+    <string name="show_leading_icon">Show/Hide leading icon</string>
+    <string name="show_hide_trailing_icon">Show/Hide trailing icon</string>
+    <string name="character_count">Character Count</string>
+    <string name="textinput_filled">Filled</string>
+    <string name="textinput_outlined">Outlined</string>
+    <string name="show_hide_stroke">Show/Hide stroke</string>
 </resources>
