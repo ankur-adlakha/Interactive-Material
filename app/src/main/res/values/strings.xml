@@ -46,4 +46,19 @@
     <string name="textinput_filled">Filled</string>
     <string name="textinput_outlined">Outlined</string>
     <string name="show_hide_stroke">Show/Hide stroke</string>
+    <string name="alert_dialog">Alert Dialog</string>
+    <string name="simple_dialog">Simple Dialog</string>
+    <string name="confirmation_dialog">Confirmation Dialog</string>
+    <string name="dialogs">Dialogs</string>
+    <string name="show_simple_dialog">Show simple dialog</string>
+    <string name="show_alert_dialog">Show alert dialog</string>
+    <string name="show_confirmation_dialog">Show confirmation dialog</string>
+    <string-array name="dialog_list_items">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+        <item>Item 5</item>
+        <item>Item 6</item>
+    </string-array>
 </resources>

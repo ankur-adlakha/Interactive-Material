@@ -6,6 +6,7 @@ import com.bluexpresso.materialplayground.materialcomponents.BottomNavigationFra
 import com.bluexpresso.materialplayground.materialcomponents.buttons.ButtonsFragment
 import com.bluexpresso.materialplayground.materialcomponents.cards.CardsFragment
 import com.bluexpresso.materialplayground.materialcomponents.chips.ChipsFragment
+import com.bluexpresso.materialplayground.materialcomponents.dialogs.DialogsFragment
 import com.bluexpresso.materialplayground.materialcomponents.textfields.TextFieldsFragment
 
 enum class MaterialComponents(val title: String) {
@@ -14,6 +15,7 @@ enum class MaterialComponents(val title: String) {
     BUTTONS("Buttons"),
     CARDS("Cards"),
     CHIPS("Chips"),
+    DIALOGS("Dialogs"),
     TEXT_FIELDS("Text fields");
 
     companion object {
@@ -24,6 +26,7 @@ enum class MaterialComponents(val title: String) {
                 BUTTONS.title -> return ButtonsFragment.newInstance()
                 CARDS.title -> return CardsFragment.newInstance()
                 CHIPS.title -> return ChipsFragment.newInstance()
+                DIALOGS.title -> return DialogsFragment.newInstance()
                 TEXT_FIELDS.title -> return TextFieldsFragment.newInstance()
             }
             return BottomAppBarsFragment.newInstance()
