@@ -53,6 +53,11 @@
     <string name="show_simple_dialog">Show simple dialog</string>
     <string name="show_alert_dialog">Show alert dialog</string>
     <string name="show_confirmation_dialog">Show confirmation dialog</string>
+    <string name="pickers">Pickers</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="show_date_picker">Show Date Picker</string>
+    <string name="show_time_picker">Show Time Picker</string>
     <string-array name="dialog_list_items">
         <item>Item 1</item>
         <item>Item 2</item>
