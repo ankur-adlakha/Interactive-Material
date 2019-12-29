@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4967344367488467~3686316538" />
+
         <activity
             android:name="com.bluexpresso.materialplayground.MainActivity"
             android:screenOrientation="portrait">

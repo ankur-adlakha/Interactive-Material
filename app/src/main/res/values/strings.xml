@@ -66,4 +66,6 @@
         <item>Item 5</item>
         <item>Item 6</item>
     </string-array>
+    <string name="add_id">ca-app-pub-4967344367488467/7433989858</string>
+    <string name="details_add_id">ca-app-pub-4967344367488467/3875347788</string>
 </resources>

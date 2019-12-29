@@ -4,6 +4,11 @@
     <corners
         android:topLeftRadius="@dimen/large_32"
         android:topRightRadius="@dimen/large_32" />
-    <solid android:color="@color/colorPrimaryLight" />
+    <gradient
+        android:angle="135"
+        android:centerColor="#212121"
+        android:endColor="#424242"
+        android:startColor="#2c2c2c"
+        android:type="linear" />
 
 </shape>
